@@ -23,7 +23,7 @@ System({
     type: "info",
     dontAddCommandList: true,
 }, async (message) => {
-    let [date, time] = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }).split(",");
+    let [date, time] = new Date().toLocaleString("en-IN", { timeZone: "Africa/harare" }).split(",");
     let menu = `╭━━━〔 ${BOT_INFO.split(';')[0]} ⁩〕━━━┈⊷\n┃⛯╭──────────────\n┃⛯│ *owner* :  ${BOT_INFO.split(';')[1]}\n┃⛯│ *user* : ${message.pushName.replace(/[\r\n]+/gm, "")}\n┃⛯│ *plugins* : ${plugins.commands.length}\n┃⛯│ *date* : ${date}\n┃⛯│ *time* : ${time}\n┃⛯│ *uptime* : ${clockString(uptime())} \n┃⛯│ *version* : ᴠ${version}\n┃⛯╰──────────────\n╰━━━━━━━━━━━━━━━┈⊷\n\n\n╭━━━━━━━━━━━━━━━┈⊷\n╽`;
     let cmnd = [], category = [];
     plugins.commands.forEach(command => {
@@ -66,7 +66,7 @@ System({
     });
     if (MEDIA_DATA) {
         const [title, body, thumbnail] = MEDIA_DATA.split(";");
-        await message.client.sendMessage(message.jid, { text: menu, contextInfo: { externalAdReply: { title, body, thumbnailUrl: thumbnail, renderLargerThumbnail: true, mediaType: 1, mediaUrl: '', sourceUrl: "https://github.com/Loki-Xer/Jarvis-md", showAdAttribution: true } } });
+        await message.client.sendMessage(message.jid, { text: menu, contextInfo: { externalAdReply: { title, body, thumbnailUrl: thumbnail, renderLargerThumbnail: true, mediaType: 1, mediaUrl: '', sourceUrl: "https://github.com/Mpeneti/PENETI-MD", showAdAttribution: true } } });
     } else {
         await message.send(menu);
     }
