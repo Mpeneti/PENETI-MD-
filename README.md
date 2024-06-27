@@ -2,7 +2,7 @@
 jarvis md is Multi Device whatsapp bot
 ***
 
-### SETUP JARVIS
+### SETUP PENETI-MD 
 
 1. Scan the QR code
     <br>
